@@ -22,7 +22,7 @@ Jetty 可以作为嵌入式服务器使用，Jetty的运行速度较快，而且
 
 和Tomcat比较编辑
 
-原文地址:Jetty和Tomcat的选择：按场景而定\[1\] 
+原文地址:Jetty和Tomcat的选择：按场景而定\[1\]
 
 1）Jetty更轻量级。这是相对Tomcat而言的。
 
@@ -42,60 +42,6 @@ Jetty 可以作为嵌入式服务器使用，Jetty的运行速度较快，而且
 
 Java代码
 
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
-8
-
-9
-
-10
-
-11
-
-12
-
-13
-
-14
-
-15
-
-16
-
-17
-
-18
-
-19
-
-20
-
-21
-
-22
-
-23
-
-24
-
-25
-
-26
-
-27
-
 //代码：以嵌入模式启动Jetty
 
 import org.mortbay.http.HttpContext;
@@ -106,13 +52,11 @@ import org.mortbay.http.SocketListener;
 
 import org.mortbay.http.handler.ResourceHandler;
 
- 
-
 public class JettySample{
 
 public static void main\(String\[\]args\)throws Exception{
 
-//创建JettyHttpServer对象 
+//创建JettyHttpServer对象
 
 HttpServer server=new HttpServer\(\);
 
@@ -134,7 +78,7 @@ context.setContextPath\("/web"\);
 
 //setResourceBase方法设置文档目录以提供资源
 
-context.setResourceBase\("C:\\j2sdk1.4.1\_05"\);
+context.setResourceBase\("C:\j2sdk1.4.1\_05"\);
 
 //添加资源处理器到HttpContext，使之能够提供文件系统中的文件
 
@@ -164,73 +108,7 @@ jetty还有对应maven插件
 
 maven pom文件的设置:
 
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
-8
-
-9
-
-10
-
-11
-
-12
-
-13
-
-14
-
-15
-
-16
-
-17
-
-18
-
-19
-
-20
-
-21
-
-22
-
-23
-
-24
-
-25
-
-26
-
-27
-
-28
-
-29
-
-30
-
-31
-
-32
-
 &lt;?xmlversion="1.0"encoding="utf-8"?&gt;
-
- 
 
 &lt;plugin&gt;
 
@@ -294,7 +172,7 @@ maven pom文件的设置:
 
 然后直接通过mvn jetty:run命令就能直接启动
 
------------------------------------------------------------------------------------------
+---
 
 注：
 
